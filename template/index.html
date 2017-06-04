@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<!-- META -->
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+		<meta name="keywords" content=""/>
+		<meta name="description" content=""/>
+		<meta name="author" content=""/>
+		<meta name="copyright" content=""/>
+		<meta name="generator" content=""/>
+		<meta name="distribution" content=""/>
+		<meta name="date" content=""/>
+		<!-- SCRIPTS -->
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		<script src="js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+		<!-- STYLE -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<title>{pagetitle}</title>
+		<!-- LINK -->
+		<link rel="shortcut icon" type="image/png" href="img/ico/favicon.png"/>
+		<!-- PLUGINS -->
+		<script src="plugins/smooth-page-scroll-to-top/smooth_scroll.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="plugins/smooth-page-scroll-to-top/smooth_scroll.css"/>
+		<link rel="stylesheet" type="text/css" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="plugins/animate/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="plugins/hover/hover.css"/>
+		<script src="plugins/pace/pace.js" type="text/javascript"></script>
+		<script src="plugins/smooth-mouse-scrolling-scrollspeed/jQuery.scrollSpeed.js" type="text/javascript"></script>
+
+		<script src="plugins/parsley/parsley.min.js" type="text/javascript"></script>
+		<script src="plugins/mask/jquery.mask.js" type="text/javascript"></script>
+
+		<link href="plugins/bootstrap-star-rating/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+		<script src="plugins/bootstrap-star-rating/js/star-rating.min.js" type="text/javascript"></script>
+		<link href="plugins/bootstrap-select/dist/css/bootstrap-select.min.css" media="all" rel="stylesheet" type="text/css" />
+		<script src="plugins/bootstrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
+
+		<link href="plugins/bootstrap-toggle/css/bootstrap-toggle.min.css" media="all" rel="stylesheet" type="text/css" />
+		<script src="plugins/bootstrap-toggle/js/bootstrap-toggle.min.js" type="text/javascript"></script>
+		<!-- <script src="plugins/ckeditor/ckeditor.js" type="text/javascript"></script> -->
+		<link rel="stylesheet" type="text/css" href="plugins/bootstrap-fileupload/bootstrap-fileupload.css"/>
+		<script src="plugins/bootstrap-fileupload/bootstrap-fileupload.js" type="text/javascript"></script>
+
+		<link href="plugins/bootstrap-slider/dist/css/bootstrap-slider.min.css" media="all" rel="stylesheet" type="text/css" />
+		<script src="plugins/bootstrap-slider/dist/bootstrap-slider.min.js" type="text/javascript"></script>
+
+		<!-- GOOGLE -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	<body>
+
+		<!-- -->
+		<div class="container-fluid">
+			<div class="container">
+				<div class="col-sm-12">
+					<br/>
+					<br/>
+					<br/>
+					<div class="flip-container">
+							<div class="flipper">
+								<div class="front">
+									<form class="form-horizontal" name="" id="duidetails-form" method="POST" action="" onsubmit="" onkeypress="return event.keyCode != 13;" accept-charset="utf-8" enctype="multipart/form-data" autocomplete="off" role="form" data-parsley-validate="">
+										<div class="form-group">
+									    <label for="name" class="col-sm-3 control-label">Name *</label>
+									    <div class="col-sm-9">
+									      <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+									    </div>
+									  </div>
+										<div class="form-group">
+									    <label for="email" class="col-sm-3 control-label">Email *</label>
+									    <div class="col-sm-9">
+									      <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+									    </div>
+									  </div>
+										<div class="form-group">
+									    <label for="phone" class="col-sm-3 control-label">Phone</label>
+									    <div class="col-sm-9">
+									      <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone">
+									    </div>
+									  </div>
+										<div class="form-group">
+									    <label for="organization" class="col-sm-3 control-label">Organization</label>
+									    <div class="col-sm-9">
+									      <input type="text" class="form-control" name="organization" id="organization" placeholder="Organization">
+									    </div>
+									  </div>
+										<div class="form-group">
+									    <label for="rating" class="col-sm-3 control-label">Rating</label>
+									    <div class="col-sm-9">
+									      <input type="number" name="rating" id="rating" class="rating form-control" value="" data-min="0" data-max="5" data-step="1" data-size="xs" data-show-caption="false" data-show-clear="false" required>
+									    </div>
+									  </div>
+										<div class="form-group">
+									    <label for="rating" class="col-sm-3 control-label">Choose</label>
+									    <div class="col-sm-9">
+												<select class="form-control" data-live-search="true">
+												  <option>1</option>
+												  <option>2</option>
+												  <option>3</option>
+												  <option>4</option>
+												  <option>5</option>
+												</select>
+									    </div>
+									  </div>
+										<div class="form-group">
+									    <label for="datepicker" class="col-sm-3 control-label">Datepicker</label>
+									    <div class="col-sm-9">
+												<div class="input-group">
+													<input type="text" name="datepicker" id="datepicker" class="form-control" value="" placeholder="mm/dd/yyyy" data-parsley-trigger="input change click focusin focusout" maxlength="255" data-parsley-required="true"/>
+													<span class="input-group-addon" id="triger-datepicker" style="cursor:pointer;">
+														<span class="glyphicon glyphicon-calendar"></span>
+													</span>
+												</div>
+									    </div>
+									  </div>
+										<div class="form-group">
+									    <label for="organization" class="col-sm-3 control-label">Project type</label>
+									    <div class="col-sm-9">
+												<input type="checkbox" name="" value="" checked data-toggle="toggle" data-size="mini">
+									    </div>
+									  </div>
+										<div class="form-group">
+									    <label for="organization" class="col-sm-3 control-label">Detailed Description *</label>
+									    <div class="col-sm-9">
+									      <textarea class="form-control" name="description" id="description" rows="5" required></textarea>
+									    </div>
+									  </div>
+										<div class="form-group">
+											<label for="spiner" class="col-sm-3 control-label">Spiner</label>
+											<div class="col-sm-9">
+												<div class="input-group">
+													<input type="text" name="spiner" id="spiner" class="form-control" value="" placeholder=""/>
+													<span class="input-group-btn">
+														<button class="btn btn-default plus" type="button" field="spiner">
+															<span class="glyphicon glyphicon-plus"></span>
+														</button>
+														<button class="btn btn-default minus" type="button" field="spiner">
+															<span class="glyphicon glyphicon-minus"></span>
+														</button>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+									    <label for="driving_suspended_license" class="col-sm-3 control-label">Are you sure?</label>
+									    <div class="col-sm-9">
+												<div class="btn-group" data-toggle="buttons">
+													<label class="btn btn-default btn-tab-next active">
+														<input type="radio" name="driving_suspended_license" id="driving-suspended-license-1" value="1" autocomplete="off">
+														Yes <i class="fa fa-check" aria-hidden="true"></i>
+													</label>
+													<label class="btn btn-default btn-tab-next">
+														<input type="radio" name="driving_suspended_license" id="driving-suspended-license-2" value="0" autocomplete="off">
+														No <i class="fa fa-times" aria-hidden="true"></i>
+													</label>
+												</div>
+									    </div>
+									  </div>
+										<div class="form-group">
+									    <label for="organization" class="col-sm-3 control-label">Slider</label>
+									    <div class="col-sm-9">
+									      <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+									    </div>
+									  </div>
+										<div class="form-group">
+											<label for="image" class="col-sm-3 control-label">Logo</label>
+											<div class="col-sm-9">
+												<div class="fileupload fileupload-new" data-provides="fileupload">
+													<div class="input-group">
+														<div class="form-control" data-trigger="fileinput">
+															<span class="glyphicon glyphicon-file"></span>
+															&nbsp;
+															<span class="fileupload-preview"></span>
+														</div>
+														<div class="input-group-btn">
+															<a class="btn btn-default btn-file">
+																<span class="fileupload-new"> <span class="glyphicon glyphicon-folder-open"></span> Select file</span>
+																<span class="fileupload-exists">  <span class="glyphicon glyphicon-folder-open"></span>  Change</span>
+																<input type="file" name="image" id="image" class="file-input"/>
+															</a>
+															<a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload"> <span class="glyphicon glyphicon-remove"></span> Remove</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+									    <div class="col-sm-offset-3 col-sm-9">
+									      <button type="submit" class="btn btn-default">Send</button>
+												<button type="reset" class="btn btn-default pull-right">Reset</button>
+									    </div>
+									  </div>
+									</form>
+								</div>
+								<div class="back">
+									<h4>Thank you!</h4>
+								</div>
+							</div>
+						</div>
+						<br/>
+						<br/>
+						<br/>
+				</div>
+			</div>
+		</div>
+		<!-- / -->
+
+		<!-- modal -->
+		<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="formModalTitle">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						<p id="formModalBody"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / modal -->
+		<script>
+			$(document).ready(function() {
+				$('form').parsley({
+					successClass: 'has-success',
+					errorClass: 'has-error',
+					classHandler: function(el) {
+						return el.$element.closest(".form-group");
+					},
+					errorsWrapper: '<span class="help-block"></span>',
+					errorTemplate: "<span></span>"
+				}).on('form:error', function() {
+					$('#formModalTitle').html('Error!');
+					$('#formModalBody').html('Please check the required fields!');
+						$('#formModal').modal('show');
+						return false;
+				}).on('form:success', function() {
+					$('.flip-container').toggleClass('hover');
+				});
+			});
+		</script>
+
+		<a href="#" class="scrollup">Scroll</a>
+		<!-- SCRIPTS -->
+		<script language="javascript" src="js/app.js"></script>
+		<script language="javascript">
+			$(document).ready(function(){
+
+			});
+		</script>
+	</body>
+</html>
